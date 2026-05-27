@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="endpoint"
+        android:title="@string/setting_endpoint_title"
+        android:summary="@string/setting_endpoint_summary"
+        android:defaultValue="@string/setting_endpoint_default"
+        android:dialogTitle="服务端地址" />
+</PreferenceScreen>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">YT VLC</string>
+    <string name="setting_title">设置</string>
+    <string name="setting_endpoint_title">播放服务端地址</string>
+    <string name="setting_endpoint_summary">http://abc.com/endpoint</string>
+    <string name="setting_endpoint_default">http://abc.com/endpoint</string>
+    <string name="msg_invalid_url">无法解析 YouTube 链接</string>
+    <string name="msg_vlc_not_found">未找到 VLC，请安装 VLC</string>
+</resources>

@@ -1,0 +1,5 @@
+/.nano_claude
+/*.log
+/build
+/app/build
+/.gradle
