@@ -60,9 +60,13 @@ public class YouTubeUtil {
 
     /**
      * 构造 VLC 播放 URL
-     * 格式: http://<endpoint>/manifest?url=<youtubeUrl>
+     * 格式: http://<endpoint>/manifest?url=<youtubeUrl>&video=<codec>&audio=<codec>
      */
-    public static Uri makeVlcUrl(String endpoint, String youtubeUrl) {
-        return Uri.parse( endpoint + "?url=" + youtubeUrl);
+    public static Uri makeVlcUrl(String endpoint, String youtubeUrl, String videoCodec, String audioCodec) {
+        Uri.Builder builder = Uri.parse(endpoint).buildUpon();
+        builder.appendQueryParameter("url", youtubeUrl);
+        builder.appendQueryParameter("video", videoCodec);
+        builder.appendQueryParameter("audio", audioCodec);
+        return builder.build();
     }
 }

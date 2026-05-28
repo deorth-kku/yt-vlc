@@ -6,4 +6,22 @@
         android:summary="@string/setting_endpoint_summary"
         android:defaultValue="@string/setting_endpoint_default"
         android:dialogTitle="服务端地址" />
+
+    <ListPreference
+        android:key="video_codec"
+        android:title="@string/setting_video_codec_title"
+        android:summary="@string/setting_video_codec_summary"
+        android:entries="@array/setting_video_codec_entries"
+        android:entryValues="@array/setting_video_codec_values"
+        android:defaultValue="@string/setting_video_codec_default"
+        android:dialogTitle="视频编码" />
+
+    <ListPreference
+        android:key="audio_codec"
+        android:title="@string/setting_audio_codec_title"
+        android:summary="@string/setting_audio_codec_summary"
+        android:entries="@array/setting_audio_codec_entries"
+        android:entryValues="@array/setting_audio_codec_values"
+        android:defaultValue="@string/setting_audio_codec_default"
+        android:dialogTitle="音频编码" />
 </PreferenceScreen>

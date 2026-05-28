@@ -42,12 +42,14 @@ public class MainActivity extends AppCompatActivity {
 
             String cleanUrl = YouTubeUtil.makeCleanUrl(videoId);
             String endpoint = Pref.getEndpoint(this);
+            String videoCodec = Pref.getVideoCodec(this);
+            String audioCodec = Pref.getAudioCodec(this);
 
             Intent vlcIntent = new Intent(Intent.ACTION_VIEW);
             vlcIntent.setPackage("org.videolan.vlc");
 
             // Set the media source path and the mime type
-            Uri videoUri = YouTubeUtil.makeVlcUrl(endpoint, cleanUrl);
+            Uri videoUri = YouTubeUtil.makeVlcUrl(endpoint, cleanUrl, videoCodec, audioCodec);
             vlcIntent.setDataAndTypeAndNormalize(videoUri, "video/*");
 
 

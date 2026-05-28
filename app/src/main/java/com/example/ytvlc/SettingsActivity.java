@@ -3,6 +3,7 @@ package com.example.ytvlc;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.EditTextPreference;
+import androidx.preference.ListPreference;
 import androidx.preference.PreferenceFragmentCompat;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -29,6 +30,28 @@ public class SettingsActivity extends AppCompatActivity {
                 endpointPref.setSummary(saved);
                 endpointPref.setOnPreferenceChangeListener((pref, newValue) -> {
                     Pref.setEndpoint(requireContext(), (String) newValue);
+                    return true;
+                });
+            }
+
+            ListPreference videoPref = findPreference("video_codec");
+            if (videoPref != null) {
+                String saved = Pref.getVideoCodec(requireContext());
+                videoPref.setValue(saved);
+                videoPref.setSummary(saved);
+                videoPref.setOnPreferenceChangeListener((pref, newValue) -> {
+                    Pref.setVideoCodec(requireContext(), (String) newValue);
+                    return true;
+                });
+            }
+
+            ListPreference audioPref = findPreference("audio_codec");
+            if (audioPref != null) {
+                String saved = Pref.getAudioCodec(requireContext());
+                audioPref.setValue(saved);
+                audioPref.setSummary(saved);
+                audioPref.setOnPreferenceChangeListener((pref, newValue) -> {
+                    Pref.setAudioCodec(requireContext(), (String) newValue);
                     return true;
                 });
             }

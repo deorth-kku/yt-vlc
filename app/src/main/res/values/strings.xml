@@ -7,4 +7,32 @@
     <string name="setting_endpoint_default">http://abc.com/endpoint</string>
     <string name="msg_invalid_url">无法解析 YouTube 链接</string>
     <string name="msg_vlc_not_found">未找到 VLC，请安装 VLC</string>
+
+    <string name="setting_video_codec_title">视频编码</string>
+    <string name="setting_video_codec_summary">av1</string>
+    <string name="setting_video_codec_default">av1</string>
+
+    <string name="setting_audio_codec_title">音频编码</string>
+    <string name="setting_audio_codec_summary">opus</string>
+    <string name="setting_audio_codec_default">opus</string>
+
+    <string-array name="setting_video_codec_entries">
+        <item>AV1</item>
+        <item>VP9</item>
+        <item>AVC</item>
+    </string-array>
+    <string-array name="setting_video_codec_values">
+        <item>av1</item>
+        <item>vp9</item>
+        <item>avc</item>
+    </string-array>
+
+    <string-array name="setting_audio_codec_entries">
+        <item>Opus</item>
+        <item>AAC</item>
+    </string-array>
+    <string-array name="setting_audio_codec_values">
+        <item>opus</item>
+        <item>aac</item>
+    </string-array>
 </resources>
